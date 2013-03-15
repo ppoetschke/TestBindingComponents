@@ -1,0 +1,108 @@
+﻿{
+	"toJSON": true,
+	"dbInfo": [
+		{
+			"name": "Model",
+			"uuid": "20202020202020202020202020202020"
+		}
+	],
+	"extraProperties": {
+		"version": "1",
+		"classes": {
+			"DataClass1": {
+				"panelColor": "#B7DDE8",
+				"panel": {
+					"isOpen": "true",
+					"pathVisible": true,
+					"position": {
+						"X": 70,
+						"Y": 52
+					}
+				}
+			},
+			"DataClass2": {
+				"panelColor": "#B8CCE4",
+				"panel": {
+					"isOpen": "true",
+					"position": {
+						"X": 493,
+						"Y": 52
+					},
+					"pathVisible": true
+				}
+			}
+		},
+		"model": {}
+	},
+	"dataClasses": [
+		{
+			"name": "DataClass1",
+			"className": "DataClass1",
+			"collectionName": "DataClass1Collection",
+			"scope": "public",
+			"uuid": "91366A5B8CFE9A43A8ABFBFEC08B39CA",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"scope": "public",
+					"uuid": "AC3E668390EEB34E92E3F0D760FFD664",
+					"unique": true,
+					"autosequence": true,
+					"type": "long",
+					"primKey": true
+				},
+				{
+					"name": "attribute1",
+					"kind": "storage",
+					"scope": "public",
+					"uuid": "FC98531B7AD8D343B1341B6C8C34E18C",
+					"type": "string"
+				},
+				{
+					"name": "attribute2",
+					"kind": "storage",
+					"scope": "public",
+					"uuid": "0B56B02A7B506B4EA248E2E149B0D6C9",
+					"type": "string"
+				},
+				{
+					"name": "dataClass2Collection",
+					"scope": "public",
+					"reversePath": true,
+					"path": "class1",
+					"type": "DataClass2Collection",
+					"kind": "relatedEntities"
+				}
+			]
+		},
+		{
+			"collectionName": "DataClass2Collection",
+			"className": "DataClass2",
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"type": "long",
+					"autosequence": "true",
+					"unique": "true",
+					"primKey": "true"
+				},
+				{
+					"name": "attribute1",
+					"scope": "public",
+					"type": "string",
+					"kind": "storage"
+				},
+				{
+					"name": "class1",
+					"scope": "public",
+					"path": "DataClass1",
+					"type": "DataClass1",
+					"kind": "relatedEntity"
+				}
+			]
+		}
+	],
+	"type": []
+}
